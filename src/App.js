@@ -19,6 +19,11 @@ class App extends React.Component {
     //get request for products
     Adapter.getProducts()
     .then(items=>{
+      // const itemsWithImage = items.map(item=>{
+      //   debugger
+      //   item = Object.assign({}, ...item)
+      //   item.image = `/`
+      // })
       this.setState({
         items: items
       })
@@ -29,11 +34,11 @@ class App extends React.Component {
     return (
       // would remove these data-test components with a package if this was going to production
       <div className="App" data-test="component-app">
-        <header className="App-header">
           <MisfitsMarketLogo />
+        <div id="selection-container">
           <ProductSelection items={this.state.items}/>
           <SelectionArea />
-        </header>
+        </div>
       </div>
     );
   }

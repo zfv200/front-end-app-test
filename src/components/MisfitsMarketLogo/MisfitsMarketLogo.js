@@ -1,10 +1,12 @@
 import React from 'react'
 
+import './MisfitsMarketLogo.css';
+
 const MisfitsMarketLogo = () => {
 
     return (
-        <div data-test='component-misfits-market-logo'>
-            MisfitsMarketLogo
+        <div id="logo-container" data-test='component-misfits-market-logo'>
+            <div id='logo'></div>
         </div>
     )
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 
+import './Message.css'
+
 const Message = (props) => {
 
     return (
-        <div data-test='component-message'>
+        <div id='message' data-test='component-message'>
             {/* {props.message} */}
-            Sold out!
+            <p id='message-content'>Sold out!</p>
         </div>
     )
 }

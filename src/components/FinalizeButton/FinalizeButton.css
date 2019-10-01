@@ -1,0 +1,9 @@
+#finalize {
+    border: solid;
+    background-color: rgb(227, 192, 84);
+    height: 11%;
+    width: 75%;
+    /* border-radius: 50%; */
+    font-size: 3vh;
+    font-weight: bold;
+}
