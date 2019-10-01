@@ -61,29 +61,7 @@ it('updates the selected item when user clicks a product', ()=>{
 
 // general api call tests:
 
-it('starts with empty array no items available', () => {
 
-})
-
-it('starts with correct items array if items are available', () => {
-
-})
-
-test('get request to api returns expected json', ()=>{
-
-})
-
-test('first user selection correctly posts to update the api', ()=>{
-
-})
-
-test('subsequent user selection/change of selection correctly posts to api', ()=>{
-
-})
-
-test('user unselecting item correctly posts to api and updates local state of selection back to null', ()=>{
-
-})
 
 
 
