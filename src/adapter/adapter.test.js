@@ -18,4 +18,5 @@ describe('testing misfits api', () => {
         expect(fetch.mock.calls.length).toEqual(1)
         expect(fetch.mock.calls[0][0]).toEqual(Adapter.productsEndpoint)
     })
+
 })

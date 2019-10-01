@@ -27,7 +27,8 @@ const defaultState = {
       product: "Apples",
       price: 1.34
     }
-  ]
+  ],
+  selectedItem: null
 }
 
 // shallowWrapper setup function for most tests
@@ -52,7 +53,10 @@ it('starts without an item being selected yet', ()=>{
 })
 
 it('updates the selected item when user clicks a product', ()=>{
-
+  const wrapper = setup()
+  const instance = wrapper.instance()
+  instance.handleItemClick(1)
+  expect(wrapper.state('selectedItem')).not.toEqual(null)
 })
 
 // general api call tests:
