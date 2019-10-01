@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme'
-import Product from './Product';
+import Item from './Item';
 
 const defaultProps = {
   id: 1,
@@ -10,20 +10,20 @@ const defaultProps = {
 
 const setup = (props={}) => {
   const setupProps = {...defaultProps, ...props}
-  return shallow(<Product {...setupProps}/>)
+  return shallow(<Item {...setupProps}/>)
 }
 
 it('renders without crashing', () => {
-  const wrapper = shallow(<Product />)
-  const component = wrapper.find("[data-test='component-product']")
+  const wrapper = shallow(<Item />)
+  const component = wrapper.find("[data-test='component-item']")
   expect(component.length).toBe(1)
 });
 
-it('renders the name of the product', ()=>{
+it('renders the name of the item', ()=>{
   //give attribute and find it
 })
 
-it('renders the price of the product', ()=>{
+it('renders the price of the item', ()=>{
   //give attribute and find it
 })
 

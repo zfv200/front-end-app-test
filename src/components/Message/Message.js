@@ -4,7 +4,8 @@ const Message = (props) => {
 
     return (
         <div data-test='component-message'>
-            {props.message}
+            {/* {props.message} */}
+            Sold out!
         </div>
     )
 }

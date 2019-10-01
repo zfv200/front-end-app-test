@@ -12,6 +12,7 @@ describe('testing misfits api', () => {
         Adapter.getProducts().then(res => {
             expect(res.data).toEqual('12345')
         })
+        .catch(err=>err)
 
         //assert on the times called and arguments given to fetch
         expect(fetch.mock.calls.length).toEqual(1)
