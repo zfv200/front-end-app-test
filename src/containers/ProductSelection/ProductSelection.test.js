@@ -7,3 +7,7 @@ it('renders without crashing', () => {
     const component = wrapper.find("[data-test='component-product-selection']")
     expect(component.length).toBe(1)
 });
+
+it('renders all items', ()=>{
+    
+})

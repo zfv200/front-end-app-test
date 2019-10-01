@@ -9,7 +9,4 @@ it('renders without crashing', () => {
     expect(component.length).toBe(1)
 });
 
-it('updates with the selected product', () => {
-    const boxWrapper = shallow(<Box />)
-    const appWrapper = shallow(<App />)
-})
+

@@ -19,4 +19,12 @@ describe('testing misfits api', () => {
         expect(fetch.mock.calls[0][0]).toEqual(Adapter.productsEndpoint)
     })
 
+    it('calls the endpoint to post a selection', ()=>{
+        fetch.mockResponseOnce(JSON.stringify({ success: true }))
+
+        Adapter.postChoice(1).then(res => {
+            expect(res.success).toEqual(true)
+        })
+        .catch(err => err)
+    })
 })
