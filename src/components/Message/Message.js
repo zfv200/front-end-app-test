@@ -4,10 +4,13 @@ import './Message.css'
 
 const Message = (props) => {
 
+    const renderMessage = () => {
+        return props.error ? "Something seems to be wrong, please try again later!" : props.message
+    }
+
     return (
         <div id='message' data-test='component-message'>
-            {/* {props.message} */}
-            <p id='message-content'>Sold out!</p>
+            <p id='message-content'>{renderMessage()}</p>
         </div>
     )
 }

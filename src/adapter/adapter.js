@@ -12,6 +12,15 @@ class Adapter {
         .then(json=>json.data.items)
         .catch(err=>err)
     }
+
+    postChoice(id){
+        return fetch(this.selectionEndpoint(id), {
+            method: 'POST',
+            headers: {
+                'X-Customer-Token': '721028102'
+            }
+        }).then(res=>res.json())
+    }
 }
 
 module.exports = new Adapter()
