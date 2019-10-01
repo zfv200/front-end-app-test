@@ -1,26 +1,55 @@
 import React from 'react';
-import logo from './logo.svg';
+import Adapter from './adapter/adapter'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// component imports:
+import ProductSelection from './containers/ProductSelection/ProductSelection'
+
+class App extends React.Component {
+
+  state={
+    items: [],
+    selectedItem: null
+  }
+
+  componentDidMount(){
+    // dummy data before setting up api calls
+    Adapter.getProducts()
+    // const items = [
+    //       {
+    //         id: 1,
+    //         product: "Eggs",
+    //         price: 1.35
+    //       },
+    //       {
+    //         id: 2,
+    //         product: "Milk",
+    //         price: 2.75
+    //       },
+    //       {
+    //         id: 3,
+    //         product: "Bread",
+    //         price: 0.99
+    //       },
+    //       {
+    //         id: 4,
+    //         product: "Apples",
+    //         price: 1.34
+    //       }
+    //     ]
+
+  }
+
+  render(){
+    return (
+      // would remove these data-test components with a package if this was going to production
+      <div className="App" data-test="component-app">
+        <header className="App-header">
+          <ProductSelection />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
