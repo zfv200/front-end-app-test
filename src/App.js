@@ -4,40 +4,25 @@ import './App.css';
 
 // component imports:
 import ProductSelection from './containers/ProductSelection/ProductSelection'
+import SelectionArea from './containers/SelectionArea/SelectionArea'
+import MisfitsMarketLogo from './components/MisfitsMarketLogo/MisfitsMarketLogo'
 
 class App extends React.Component {
 
   state={
     items: [],
-    selectedItem: null
+    selectedItem: null,
+    finalized: false
   }
 
   componentDidMount(){
-    // dummy data before setting up api calls
+    //get request for products
     Adapter.getProducts()
-    // const items = [
-    //       {
-    //         id: 1,
-    //         product: "Eggs",
-    //         price: 1.35
-    //       },
-    //       {
-    //         id: 2,
-    //         product: "Milk",
-    //         price: 2.75
-    //       },
-    //       {
-    //         id: 3,
-    //         product: "Bread",
-    //         price: 0.99
-    //       },
-    //       {
-    //         id: 4,
-    //         product: "Apples",
-    //         price: 1.34
-    //       }
-    //     ]
-
+    .then(items=>{
+      this.setState({
+        items: items
+      })
+    })
   }
 
   render(){
@@ -45,7 +30,9 @@ class App extends React.Component {
       // would remove these data-test components with a package if this was going to production
       <div className="App" data-test="component-app">
         <header className="App-header">
-          <ProductSelection />
+          <MisfitsMarketLogo />
+          <ProductSelection items={this.state.items}/>
+          <SelectionArea />
         </header>
       </div>
     );

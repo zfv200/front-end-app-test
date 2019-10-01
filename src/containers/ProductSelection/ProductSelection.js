@@ -1,12 +1,16 @@
 import React from 'react'
 
-import ProductDisplay from '../ProductDisplay/ProductDisplay'
+// component imports:
+import Item from '../../components/Item/Item'
 
-const ProductSelection = () => {
+const ProductSelection = (props) => {
 
+    const renderItems = () => {
+        return props.items ? props.items.map(item=><Item key={item.id} {...item}/>) : null
+    }
     return (
         <div data-test='component-product-selection'>
-            <ProductDisplay />
+            {renderItems()}
         </div>
     )
 }
