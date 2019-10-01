@@ -1,4 +1,5 @@
 import React from 'react'
+import './SelectionArea.css'
 
 // component imports:
 import Box from '../../components/Box/Box'
@@ -8,10 +9,13 @@ import FinalizeButton from '../../components/FinalizeButton/FinalizeButton'
 const SelectionArea = () => {
 
     return (
-        <div data-test='component-selection-area'>
-            <Box />
-            <Message />
-            <FinalizeButton />
+        <div id="selection-area" data-test='component-selection-area'>
+            <div id='customer-tools'>
+                <h1>My Box:</h1>
+                <Box />
+                <Message />
+                <FinalizeButton />
+            </div>
         </div>
     )
 }

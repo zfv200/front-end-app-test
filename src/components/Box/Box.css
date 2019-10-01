@@ -1,0 +1,7 @@
+#box {
+    border: solid;
+    border-radius: 50%;
+    height: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

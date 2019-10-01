@@ -1,0 +1,10 @@
+.item {
+    border: 8px solid rgb(227, 192, 84);
+    /* border-color: rgb(227, 192, 84);     */
+    border-style: solid;
+    width: 34%;
+    height: 67%;
+    margin: auto;
+    margin-top: 38px;
+    border-radius: 50%;
+}

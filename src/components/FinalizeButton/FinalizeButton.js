@@ -1,11 +1,12 @@
 import React from 'react'
+import './FinalizeButton.css'
 
 const FinalizeButton = () => {
 
     return (
-        <div data-test='component-finalize-button'>
-            FinalizeButton
-        </div>
+        <button id='finalize' data-test='component-finalize-button'>
+            Finalize Selection
+        </button>
     )
 }
 

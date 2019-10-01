@@ -1,10 +1,11 @@
 import React from 'react'
 
+import './Box.css'
+
 const Box = () => {
 
     return (
-        <div data-test='component-box'>
-            Customer's box
+        <div id='box' data-test='component-box'>
         </div>
     )
 }

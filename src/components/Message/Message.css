@@ -1,0 +1,10 @@
+#message {
+    color: black;
+    text-align: center;
+    height: 10%;
+    /* margin: 10%; */
+}
+
+#message-content {
+    font-size: 4vh;
+}

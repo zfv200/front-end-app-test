@@ -1,12 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './item.css'
 // import { numberLiteralTypeAnnotation } from '@babel/types';
 
-const Item = () => {
+const Item = (props) => {
+
+    const getImageSource = () => {
+        let formattedName = props.product.toLowerCase()
+        let image = require(`../../../public/${formattedName}.jpg`)
+        return {backgroundImage: `url(${image})`}
+    }
 
     return (
-        <div data-test='component-item'>
-            single Item
+        <div style={getImageSource()} className='item' data-test='component-item'>
         </div>
     )
 }
