@@ -1,3 +1,14 @@
+Welcome to Misfits Market Single Product Selection!
+
+To Run:
+ 1. clone repo to local machine
+ 2. in directory, run npm install
+ 3. test suite can be run with 'npm test'
+ 4. local development server can be started with 'npm start'
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
