@@ -4,6 +4,7 @@ import './FinalizeButton.css'
 const FinalizeButton = (props) => {
 
     const buttonText = () => {
+        // toggle button text based on app state
         return props.finalized ? "Choose something else!" : "Finalize Selection!"
     }
 
